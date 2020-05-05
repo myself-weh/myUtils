@@ -66,4 +66,18 @@ public class RandomUtil {
 		return str.toString();
 	}
 
+	public static int  randomNumber() {
+		String str ="123456789";
+		return str.charAt(random(0, str.length()-1));
+	}
+	/**
+	 * 生成指定长度的数字
+	 */
+	public static String random(int length) {
+		StringBuffer str = new StringBuffer();
+		for(int i=0 ;i<length ;i ++) {
+			str.append(randomNumber());
+		}
+		return str.toString();   
+	}
 }
